@@ -1,0 +1,71 @@
+%btn-orange {
+  color: $white-color;
+  background-color: $orange-color;
+  border: none;
+}
+
+%btn-orange-hover {
+  background-color: $white-color;
+  color: $orange-color;
+  border: $orange-color 1px solid;
+}
+
+%btn-white {
+  color: $black-color;
+  background-color: $white-color;
+  border: 1px solid $black-color;
+}
+
+%btn-white-hover {
+  background-color: $black-color;
+  color: $white-color;
+}
+
+@mixin btn($padding, $height) {
+  padding: $padding;
+  line-height: $height;
+  max-height: $height;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.header-btn {
+  &-white {
+    @extend %btn-white;
+    @include btn(0 calc(36px - 2px), 45px);
+
+    &:hover {
+      @extend %btn-white-hover
+    }
+  }
+
+  &-orange {
+    @extend %btn-orange;
+    @include btn(0 22px, 45px);
+
+    &:hover {
+      @extend %btn-orange-hover
+    }
+  }
+}
+
+.main-btn {
+  &-white {
+    @extend %btn-white;
+    @include btn(0 29px, 60px);
+
+    &:hover {
+      @extend %btn-white-hover
+    }
+  }
+
+  &-orange {
+    @extend  %btn-orange;
+    @include btn(0 41px, 60px);
+
+    &:hover {
+      @extend %btn-orange-hover;
+    }
+  }
+}

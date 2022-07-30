@@ -1,0 +1,417 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  transition: 0.3s;
+  font-family: "Graphik LCG";
+}
+
+@font-face {
+  font-family: "Graphik LCG";
+  src: url("../assets/fonts/GraphikLCG-Regular.woff2") format("woff2"), url("../assets/fonts/GraphikLCG-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Graphik LCG";
+  src: url("../assets/fonts/GraphikLCG-Semibold.woff2") format("woff2"), url("../assets/fonts/GraphikLCG-Semibold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+.main-btn-orange, .header-btn-orange {
+  color: #FFFFFF;
+  background-color: #FF6336;
+  border: none;
+}
+
+.main-btn-orange:hover, .header-btn-orange:hover {
+  background-color: #FFFFFF;
+  color: #FF6336;
+  border: #FF6336 1px solid;
+}
+
+.main-btn-white, .header-btn-white {
+  color: #000000;
+  background-color: #FFFFFF;
+  border: 1px solid #000000;
+}
+
+.main-btn-white:hover, .header-btn-white:hover {
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+.header-btn-white {
+  padding: 0 34px;
+  line-height: 45px;
+  max-height: 45px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+}
+.header-btn-orange {
+  padding: 0 22px;
+  line-height: 45px;
+  max-height: 45px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+}
+.main-btn-white {
+  padding: 0 29px;
+  line-height: 60px;
+  max-height: 60px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+}
+.main-btn-orange {
+  padding: 0 41px;
+  line-height: 60px;
+  max-height: 60px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+}
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+.flex-row-center {
+  justify-content: center;
+}
+.flex-column {
+  flex-direction: column;
+}
+.flex-column-center {
+  align-items: center;
+}
+
+.header {
+  padding: 0 51px;
+  border-bottom: 1px solid #CCCCCC;
+}
+.header-container {
+  max-width: 1338px;
+  width: 100%;
+  padding: 25px 0;
+  align-items: center;
+  gap: 50px;
+}
+.header-nav {
+  flex-grow: 1;
+  gap: 50px;
+}
+.header-link {
+  font-size: 15px;
+  color: #000000;
+}
+.header-btns {
+  gap: 10px;
+}
+
+.container {
+  max-width: 1290px;
+  width: 100%;
+}
+
+.main-accelerate-wrap {
+  width: 100%;
+  padding: 129px 20px 172px;
+}
+.main-container {
+  max-width: 1311px;
+  width: 100%;
+}
+.main-left-container {
+  gap: 51px;
+}
+.main-btns {
+  gap: 10px;
+  align-items: center;
+}
+.main-img {
+  width: 100%;
+  max-width: 759px;
+}
+
+.main-bold-text {
+  font-size: 65px;
+  line-height: 70px;
+  max-width: 552px;
+  font-weight: 600;
+}
+
+.bold-text {
+  font-size: 50px;
+  line-height: 60px;
+  font-weight: 600;
+}
+
+.text {
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.main-text {
+  font-size: 25px;
+  line-height: 35px;
+  max-width: 471px;
+}
+.main-text-small {
+  padding-top: 14px;
+  max-width: 369px;
+  font-size: 15px;
+}
+.main-text-img {
+  max-width: 678px;
+}
+
+.orange-block-wrap {
+  background-color: #FF9C7D;
+  width: 100%;
+  padding: 108px 20px 104px;
+}
+
+.orange-block-container {
+  max-width: 1243px;
+  width: 100%;
+  gap: 85px;
+}
+
+.orange-block-text {
+  max-width: 720px;
+  text-align: center;
+}
+
+.logos-container {
+  gap: 102px;
+}
+
+.middle-wrap {
+  padding: 90px 20px 150px;
+  background-color: #FFFFFF;
+  width: 100%;
+}
+
+.middle-container {
+  max-width: 1290px;
+  width: 100%;
+  gap: 250px;
+}
+
+.underline-link {
+  color: #000000;
+  text-decoration: underline;
+  max-width: 109px;
+}
+
+.start {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 600;
+  color: #000000;
+  max-width: 96px;
+}
+.start:hover {
+  text-decoration: underline;
+}
+
+.bold-first {
+  max-width: 493px;
+}
+
+.text-first {
+  max-width: 491px;
+}
+
+.middle-img {
+  max-width: 632px;
+  width: 100%;
+}
+
+.block-items {
+  align-items: center;
+  gap: 138px;
+}
+
+.text-middle-container {
+  gap: 30px;
+}
+
+.text-second {
+  max-width: 450px;
+}
+
+.text-third {
+  max-width: 520px;
+}
+
+.light-yellow-wrap {
+  background-color: #FFF8E4;
+  width: 100%;
+  padding: 120px 20px 147px;
+}
+.light-yellow-container {
+  max-width: 1197px;
+  gap: 75px;
+}
+.light-yellow-bold-text {
+  font-size: 25px;
+  line-height: 35px;
+  font-weight: 600;
+}
+.light-yellow-text {
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.row-apps {
+  gap: 100px;
+}
+
+.row-app-container {
+  max-width: 330px;
+  text-align: center;
+  gap: 23px;
+}
+
+.app-icon {
+  max-width: 160px;
+  width: 100%;
+}
+
+.boost-wrap {
+  background-color: #FFFFFF;
+  width: 100%;
+  padding: 154px 20px 187px;
+}
+.boost-img {
+  max-width: 179px;
+  width: 100%;
+}
+.boost-img-manager {
+  max-width: 145px;
+  padding-bottom: 49px;
+}
+.boost-img-dev {
+  padding-bottom: 67px;
+}
+.boost-img-translate {
+  padding-top: 50px;
+  padding-bottom: 15px;
+}
+.boost-container {
+  max-width: 409px;
+  width: 100%;
+}
+
+.title-text {
+  font-size: 30px;
+  line-height: 40px;
+  font-weight: 600;
+  padding-bottom: 33px;
+}
+
+.boosts-container {
+  gap: 75px;
+  max-width: 1290px;
+  width: 100%;
+}
+
+.title-second {
+  padding-top: 17px;
+}
+
+.title-third {
+  padding-top: 30px;
+}
+
+.boost-text {
+  padding-bottom: 25px;
+}
+
+.row-boosts {
+  gap: 30px;
+}
+
+.blue-block-wrap {
+  background-color: #C9E8F2;
+  padding: 53px 20px 105px;
+}
+.blue-block-container {
+  max-width: 1290px;
+  width: 100%;
+  gap: 59px;
+}
+.blue-block-left-side {
+  max-width: 920px;
+}
+.blue-block-text {
+  font-size: 30px;
+  line-height: 40px;
+}
+.blue-block-small-text {
+  font-size: 15px;
+  line-height: 25px;
+  padding: 23px 0 7px;
+}
+
+.revolut-logo {
+  max-width: 115px;
+  width: 100%;
+}
+
+.man-photo {
+  max-width: 310px;
+  width: 100%;
+}
+
+.brown-block-wrap {
+  background-color: #DABC98;
+  padding: 80px 20px 84px;
+}
+.brown-block-container {
+  max-width: 1332px;
+  width: 100%;
+  gap: 71px;
+}
+.brown-block-logos {
+  align-items: flex-start;
+  gap: 16px;
+}
+.brown-right-container {
+  max-width: 811px;
+  width: 100%;
+  gap: 67px;
+}
+.brown-left-container {
+  gap: 70px;
+}
+.brown-line-separate {
+  max-width: 1px;
+  background-color: black;
+  width: 100%;
+  max-height: 168px;
+}
+.brown-bold-text {
+  font-size: 35px;
+  line-height: 50px;
+  font-weight: 600;
+  max-width: 461px;
+}
+.brown-small-text {
+  font-size: 15px;
+  line-height: 25px;
+}
+
+.cake-img {
+  max-width: 176px;
+  width: 100%;
+}
+
+/*# sourceMappingURL=style.css.map */
