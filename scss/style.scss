@@ -377,3 +377,178 @@
   max-width: 176px;
   width: 100%;
 }
+
+.integrate {
+
+  &-wrap {
+    padding: 165px 20px 162px;
+    background-color: $white-color;
+  }
+
+  &-bold-text {
+    @include font-settings(65px, 75px);
+    font-weight: 600;
+    max-width: 790px;
+  }
+
+  &-text {
+    @include font-settings(25px, 30px);
+    max-width: 539px;
+  }
+
+  &-container {
+    width: 100%;
+    max-width: $max-width-container;
+    gap: 32px;
+  }
+
+  &-text-container {
+    text-align: center;
+    padding-bottom: 7px;
+  }
+
+  &-img {
+    width: 100%;
+    max-width: 1023px;
+  }
+}
+
+.orange-foot {
+
+  &-wrap {
+    background-color: #FF9C7D;
+    padding: 119px 20px 161px;
+  }
+
+  &-container {
+    max-width: $max-width-container;
+    width: 100%;
+    text-align: center;
+    gap: 54px;
+  }
+
+  &-bold-text {
+    @include font-settings(65px, 75px);
+    font-weight: 600;
+    max-width: 784px;
+  }
+
+  &-txt {
+    @include font-settings(20px, 30px);
+
+    &-container {
+      gap: 29px;
+    }
+  }
+}
+
+.footer-menu {
+  &-wrap {
+    padding: 92px 20px 95px;
+    background-color: $white-color;
+  }
+
+  &-bold-text {
+    @include font-settings(40px, 50px);
+    font-weight: 600;
+    padding-bottom: 28px;
+  }
+
+  &-text {
+    @include font-settings(20px, 30px);
+    padding-bottom: 15px;
+  }
+
+  &-container {
+    max-width: $max-width-container;
+    width: 100%;
+    gap: 140px;
+  }
+
+  &-case-items {
+    max-width: 300px;
+  }
+
+}
+
+.cycles-img {
+  max-width: 300px;
+  width: 100%;
+}
+
+.spec-footer {
+  max-width: 80px;
+  width: 100%;
+  padding: 31px 0 10px 0;
+}
+
+.read {
+  max-width: 107px;
+}
+
+.link-footer-bold {
+  @include font-settings(20px, 25px);
+  font-weight: 600;
+  color: $black-color;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.items-footer-container {
+  gap: 21px;
+  max-width: 171px;
+  width: 100%;
+}
+
+.items {
+  gap: 15px;
+}
+
+.link-footer {
+  @include font-settings(15px, 15px);
+  color: $black-color;
+}
+
+.links-container {
+  width: 65%;
+  gap: 50px;
+}
+
+.footer {
+  &-wrap {
+    padding: 52px 20px 43px;
+  }
+
+  &-text {
+    @include font-settings(12px, 15px);
+    max-width: 270px;
+  }
+
+  &-line-wrapper {
+    padding: 0 20px;
+  }
+
+  &-line {
+    max-width: $max-width-container;
+    width: 100%;
+    border-bottom: 1px solid $black-color;
+  }
+
+  &-container {
+    max-width: $max-width-container;
+    width: 100%;
+    justify-content: space-between;
+    gap: 15px;
+  }
+
+  &-left-side-container {
+    gap: 14px;
+  }
+
+  &-right-side-container {
+    max-width: 200px;
+    width: 100%;
+  }
+}
