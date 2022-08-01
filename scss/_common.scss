@@ -13,7 +13,11 @@ $max-width-container: 1290px;
 $max-width-main-container: 1311px;
 $white-color: #FFFFFF;
 $orange-color: #FF6336;
+$orange-block-color: #FF9C7D;
 $black-color: #000000;
+$light-yellow-color: #FFF8E4;
+$blue-color: #C9E8F2;
+$brown-color: #DABC98;
 
 @font-face {
   font-family: 'Graphik LCG';
@@ -31,4 +35,14 @@ $black-color: #000000;
   font-weight: 600;
   font-style: normal;
   font-display: swap;
+}
+
+%container {
+  max-width: $max-width-container;
+  width: 100%;
+}
+
+@mixin size($max-width, $width) {
+  max-width: $max-width;
+  width: $width;
 }

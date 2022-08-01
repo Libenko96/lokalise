@@ -1,6 +1,11 @@
 @import "./common";
 @import "./btns";
 
+@mixin font-settings($size, $height) {
+  font-size: $size;
+  line-height: $height;
+}
+
 .flex {
   display: flex;
   flex-wrap: wrap;
@@ -23,8 +28,7 @@
   border-bottom: 1px solid #CCCCCC;
 
   &-container {
-    max-width: $max-width-header;
-    width: 100%;
+    @include size($max-width-header, 100%);
     padding: 25px 0;
     align-items: center;
     gap: 50px;
@@ -45,21 +49,14 @@
   }
 }
 
-.container {
-  max-width: $max-width-container;
-  width: 100%;
-}
-
 .main {
 
   &-accelerate-wrap {
-    width: 100%;
     padding: 129px 20px 172px;
   }
 
   &-container {
-    max-width: $max-width-main-container;
-    width: 100%;
+    @include size($max-width-main-container, 100%);
   }
 
   &-left-container {
@@ -72,14 +69,8 @@
   }
 
   &-img {
-    width: 100%;
-    max-width: 759px;
+    @include size(759px, 100%);
   }
-}
-
-@mixin font-settings($size, $height) {
-  font-size: $size;
-  line-height: $height;
 }
 
 .main-bold-text {
@@ -113,14 +104,12 @@
 }
 
 .orange-block-wrap {
-  background-color: #FF9C7D;
-  width: 100%;
+  background-color: $orange-block-color;
   padding: 108px 20px 104px;
 }
 
 .orange-block-container {
-  max-width: 1243px;
-  width: 100%;
+  @extend %container;
   gap: 85px;
 }
 
@@ -136,26 +125,22 @@
 .middle-wrap {
   padding: 90px 20px 150px;
   background-color: $white-color;
-  width: 100%;
 }
 
 .middle-container {
-  max-width: $max-width-container;
-  width: 100%;
+  @include size($max-width-container, 100%);
   gap: 250px;
 }
 
 .underline-link {
   color: $black-color;
   text-decoration: underline;
-  max-width: 109px;
 }
 
 .start {
   @include font-settings(20px, 30px);
   font-weight: 600;
   color: $black-color;
-  max-width: 96px;
 
   &:hover {
     text-decoration: underline;
@@ -171,8 +156,7 @@
 }
 
 .middle-img {
-  max-width: 632px;
-  width: 100%;
+  @include size(632px, 100%);
 }
 
 .block-items {
@@ -195,13 +179,12 @@
 .light-yellow {
 
   &-wrap {
-    background-color: #FFF8E4;
-    width: 100%;
+    background-color: $light-yellow-color;
     padding: 120px 20px 147px;
   }
 
   &-container {
-    max-width: 1197px;
+    @extend %container;
     gap: 75px;
   }
 
@@ -226,20 +209,17 @@
 }
 
 .app-icon {
-  max-width: 160px;
-  width: 100%;
+  @include size(160px, 100%);
 }
 
 .boost {
   &-wrap {
     background-color: $white-color;
-    width: 100%;
     padding: 154px 20px 187px;
   }
 
   &-img {
-    max-width: 179px;
-    width: 100%;
+    @include size(179px, 100%);
 
     &-manager {
       max-width: 145px;
@@ -257,8 +237,7 @@
   }
 
   &-container {
-    max-width: 409px;
-    width: 100%;
+    @include size(409px, 100%);
   }
 }
 
@@ -269,9 +248,8 @@
 }
 
 .boosts-container {
+  @extend %container;
   gap: 75px;
-  max-width: $max-width-container;
-  width: 100%;
 }
 
 .title-second {
@@ -292,13 +270,12 @@
 
 .blue-block {
   &-wrap {
-    background-color: #C9E8F2;
+    background-color: $blue-color;
     padding: 53px 20px 105px;
   }
 
   &-container {
-    max-width: $max-width-container;
-    width: 100%;
+    @extend %container;
     gap: 59px;
   }
 
@@ -317,25 +294,22 @@
 }
 
 .revolut-logo {
-  max-width: 115px;
-  width: 100%;
+  @include size(115px, 100%);
 }
 
 .man-photo {
-  max-width: 310px;
-  width: 100%;
+  @include size(310px, 100%);
 }
 
 .brown {
   &-block {
     &-wrap {
-      background-color: #DABC98;
+      background-color: $brown-color;
       padding: 80px 20px 84px;
     }
 
     &-container {
-      max-width: 1332px;
-      width: 100%;
+      @include size(1332px, 100%);
       gap: 71px;
     }
 
@@ -346,8 +320,7 @@
   }
 
   &-right-container {
-    max-width: 811px;
-    width: 100%;
+    @include size(811px, 100%);
     gap: 67px;
   }
 
@@ -356,9 +329,8 @@
   }
 
   &-line-separate {
-    max-width: 1px;
+    @include size(1px, 100%);
     background-color: black;
-    width: 100%;
     max-height: 168px;
   }
 
@@ -374,8 +346,7 @@
 }
 
 .cake-img {
-  max-width: 176px;
-  width: 100%;
+  @include size(176px, 100%);
 }
 
 .integrate {
@@ -397,8 +368,7 @@
   }
 
   &-container {
-    width: 100%;
-    max-width: $max-width-container;
+    @extend %container;
     gap: 32px;
   }
 
@@ -408,21 +378,19 @@
   }
 
   &-img {
-    width: 100%;
-    max-width: 1023px;
+    @include size(1023px, 100%);
   }
 }
 
 .orange-foot {
 
   &-wrap {
-    background-color: #FF9C7D;
+    background-color: $orange-block-color;
     padding: 119px 20px 161px;
   }
 
   &-container {
-    max-width: $max-width-container;
-    width: 100%;
+    @extend %container;
     text-align: center;
     gap: 54px;
   }
@@ -460,30 +428,22 @@
   }
 
   &-container {
-    max-width: $max-width-container;
-    width: 100%;
+    @extend %container;
     gap: 140px;
   }
 
   &-case-items {
     max-width: 300px;
   }
-
 }
 
 .cycles-img {
-  max-width: 300px;
-  width: 100%;
+  @include size(300px, 100%);
 }
 
 .spec-footer {
-  max-width: 80px;
-  width: 100%;
+  @include size(80px, 100%);
   padding: 31px 0 10px 0;
-}
-
-.read {
-  max-width: 107px;
 }
 
 .link-footer-bold {
@@ -497,9 +457,8 @@
 }
 
 .items-footer-container {
+  @include size(171px, 100%);
   gap: 21px;
-  max-width: 171px;
-  width: 100%;
 }
 
 .items {
@@ -531,14 +490,12 @@
   }
 
   &-line {
-    max-width: $max-width-container;
-    width: 100%;
+    @extend %container;
     border-bottom: 1px solid $black-color;
   }
 
   &-container {
-    max-width: $max-width-container;
-    width: 100%;
+    @extend %container;
     justify-content: space-between;
     gap: 15px;
   }
@@ -548,7 +505,6 @@
   }
 
   &-right-side-container {
-    max-width: 200px;
-    width: 100%;
+    @include size(200px, 100%);
   }
 }
