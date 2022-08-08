@@ -165,12 +165,12 @@
   max-width: 759px;
   width: 100%;
 }
-
 .main-bold-text {
   font-size: 65px;
   line-height: 70px;
   max-width: 552px;
   font-weight: 600;
+  overflow-wrap: anywhere;
 }
 
 .bold-text {
@@ -224,7 +224,7 @@
 .middle-container {
   max-width: 1290px;
   width: 100%;
-  gap: 250px;
+  gap: 14vw;
 }
 
 .underline-link {
@@ -257,7 +257,7 @@
 
 .block-items {
   align-items: center;
-  gap: 138px;
+  gap: 7vw;
 }
 
 .text-middle-container {
@@ -278,11 +278,13 @@
 }
 .light-yellow-container {
   gap: 75px;
+  text-align: center;
 }
 .light-yellow-bold-text {
   font-size: 25px;
   line-height: 35px;
   font-weight: 600;
+  width: 100%;
 }
 .light-yellow-text {
   font-size: 18px;
@@ -468,6 +470,7 @@
   line-height: 75px;
   font-weight: 600;
   max-width: 784px;
+  overflow-wrap: anywhere;
 }
 .orange-foot-txt {
   font-size: 20px;
