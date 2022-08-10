@@ -37,9 +37,30 @@ $brown-color: #DABC98;
   font-display: swap;
 }
 
-%container {
+%inner {
   max-width: $max-width-container;
   width: 100%;
+}
+
+%flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+%flex-row {
+  @extend %flex;
+  justify-content: center;
+}
+
+%flex-col {
+  @extend %flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: $max-width-container;
+  width: 100%;
+  display: flex;
 }
 
 @mixin size($max-width, $width) {

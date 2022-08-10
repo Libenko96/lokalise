@@ -7,8 +7,7 @@
 }
 
 .flex {
-  display: flex;
-  flex-wrap: wrap;
+  @extend %flex;
 
   &-row-center {
     justify-content: center;
@@ -24,10 +23,12 @@
 }
 
 .header {
+  @extend %flex-row;
   padding: 0 51px;
   border-bottom: 1px solid #CCCCCC;
 
   &-container {
+    @extend %flex;
     @include size($max-width-header, 100%);
     padding: 25px 0;
     align-items: center;
@@ -35,6 +36,7 @@
   }
 
   &-nav {
+    @extend %flex;
     flex-grow: 1;
     gap: 50px;
   }
@@ -45,13 +47,19 @@
   }
 
   &-btns {
+    @extend %flex;
     gap: 10px;
   }
 }
 
 .main {
 
+  &-accelerate {
+    @extend %flex;
+  }
+
   &-accelerate-wrap {
+    @extend %flex-row;
     padding: 129px 20px 172px;
   }
 
@@ -59,11 +67,13 @@
     @include size($max-width-main-container, 100%);
   }
 
-  &-left-container {
+  &-left-inner {
+    @extend %flex-col;
     gap: 51px;
   }
 
   &-btns {
+    @extend %flex;
     gap: 10px;
     align-items: center;
   }
@@ -105,12 +115,13 @@
 }
 
 .orange-block-wrap {
+  @extend %flex-row;
   background-color: $orange-block-color;
   padding: 108px 20px 104px;
 }
 
-.orange-block-container {
-  @extend %container;
+.orange-block-inner {
+  @extend %flex-row;
   gap: 85px;
 }
 
@@ -120,16 +131,18 @@
 }
 
 .logos-container {
+  @extend %flex;
   gap: 102px;
 }
 
 .middle-wrap {
+  @extend %flex-row;
   padding: 90px 20px 150px;
   background-color: $white-color;
 }
 
-.middle-container {
-  @include size($max-width-container, 100%);
+.middle-inner {
+  @extend %flex-col;
   gap: 14vw;
 }
 
@@ -161,11 +174,13 @@
 }
 
 .block-items {
+  @extend %flex;
   align-items: center;
   gap: 7vw;
 }
 
-.text-middle-container {
+.text-middle-inner {
+  @extend %flex-col;
   gap: 30px;
 }
 
@@ -180,12 +195,13 @@
 .light-yellow {
 
   &-wrap {
+    @extend %flex-row;
     background-color: $light-yellow-color;
     padding: 120px 20px 147px;
   }
 
-  &-container {
-    @extend %container;
+  &-inner {
+    @extend %flex-row;
     gap: 75px;
     text-align: center;
   }
@@ -202,10 +218,12 @@
 }
 
 .row-apps {
+  @extend %flex-row;
   gap: 100px;
 }
 
 .row-app-container {
+  @extend %flex-col;
   max-width: 330px;
   text-align: center;
   gap: 23px;
@@ -217,6 +235,7 @@
 
 .boost {
   &-wrap {
+    @extend %flex-row;
     background-color: $white-color;
     padding: 154px 20px 187px;
   }
@@ -240,6 +259,7 @@
   }
 
   &-container {
+    @extend %flex-col;
     @include size(409px, 100%);
   }
 }
@@ -250,8 +270,8 @@
   padding-bottom: 33px;
 }
 
-.boosts-container {
-  @extend %container;
+.boosts-inner {
+  @extend %flex-col;
   gap: 75px;
 }
 
@@ -268,21 +288,24 @@
 }
 
 .row-boosts {
+  @extend %flex-row;
   gap: 30px;
 }
 
 .blue-block {
   &-wrap {
+    @extend %flex-row;
     background-color: $blue-color;
     padding: 53px 20px 105px;
   }
 
-  &-container {
-    @extend %container;
+  &-inner {
+    @extend %flex;
     gap: 59px;
   }
 
   &-left-side {
+    @extend %flex-col;
     max-width: 920px;
   }
 
@@ -307,27 +330,35 @@
 .brown {
   &-block {
     &-wrap {
+      @extend %flex-row;
       background-color: $brown-color;
       padding: 80px 20px 84px;
     }
 
     &-container {
       @include size(1332px, 100%);
+    }
+
+    &-inner {
+      @extend %flex;
       gap: 71px;
     }
 
     &-logos {
+      @extend %flex-col;
       align-items: flex-start;
       gap: 16px;
     }
   }
 
-  &-right-container {
+  &-right-inner {
+    @extend %flex;
     @include size(811px, 100%);
     gap: 67px;
   }
 
-  &-left-container {
+  &-left-inner {
+    @extend %flex;
     gap: 70px;
   }
 
@@ -355,6 +386,7 @@
 .integrate {
 
   &-wrap {
+    @extend %flex-row;
     padding: 165px 20px 162px;
     background-color: $white-color;
   }
@@ -370,12 +402,13 @@
     max-width: 539px;
   }
 
-  &-container {
-    @extend %container;
+  &-inner {
+    @extend %flex-col;
     gap: 32px;
   }
 
-  &-text-container {
+  &-text-inner {
+    @extend %flex-col;
     text-align: center;
     padding-bottom: 7px;
   }
@@ -388,12 +421,13 @@
 .orange-foot {
 
   &-wrap {
+    @extend %flex-row;
     background-color: $orange-block-color;
     padding: 119px 20px 161px;
   }
 
-  &-container {
-    @extend %container;
+  &-inner {
+    @extend %flex-col;
     text-align: center;
     gap: 54px;
   }
@@ -408,7 +442,8 @@
   &-txt {
     @include font-settings(20px, 30px);
 
-    &-container {
+    &-inner {
+      @extend %flex-col;
       gap: 29px;
     }
   }
@@ -416,6 +451,7 @@
 
 .footer-menu {
   &-wrap {
+    @extend %flex-row;
     padding: 92px 20px 95px;
     background-color: $white-color;
   }
@@ -431,12 +467,14 @@
     padding-bottom: 15px;
   }
 
-  &-container {
-    @extend %container;
+  &-inner {
+    @extend %flex;
+    @extend %inner;
     gap: 140px;
   }
 
   &-case-items {
+    @extend %flex-col;
     max-width: 300px;
   }
 }
@@ -460,12 +498,14 @@
   }
 }
 
-.items-footer-container {
+.items-footer-block {
+  @extend %flex-col;
   @include size(171px, 100%);
   gap: 21px;
 }
 
 .items {
+  @extend %flex-col;
   gap: 15px;
 }
 
@@ -475,12 +515,14 @@
 }
 
 .links-container {
+  @extend %flex;
   width: 65%;
   gap: 50px;
 }
 
 .footer {
   &-wrap {
+    @extend %flex-row;
     padding: 52px 20px 43px;
   }
 
@@ -490,25 +532,28 @@
   }
 
   &-line-wrapper {
+    @extend %flex-row;
     padding: 0 20px;
   }
 
   &-line {
-    @extend %container;
+    @extend %inner;
     border-bottom: 1px solid $black-color;
   }
 
-  &-container {
-    @extend %container;
+  &-inner {
+    @extend %flex;
+    @extend %inner;
     justify-content: space-between;
     gap: 15px;
   }
 
-  &-left-side-container {
+  &-left-side-inner {
+    @extend %flex;
     gap: 14px;
   }
 
-  &-right-side-container {
+  &-right-side-inner {
     @include size(200px, 100%);
   }
 }
