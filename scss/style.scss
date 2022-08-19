@@ -627,7 +627,6 @@
   }
 
   .row-boosts {
-    flex-direction: column;
     gap: 50px;
   }
 
@@ -778,6 +777,18 @@
 
   .footer-menu-wrap {
     padding: 50px 20px;
+  }
+
+  .footer-inner, .footer-left-side-inner {
+    flex-direction: column;
+  }
+
+  .footer-inner {
+    text-align: center;
+  }
+
+  .links-container {
+    gap: 30px;
   }
 }
 
